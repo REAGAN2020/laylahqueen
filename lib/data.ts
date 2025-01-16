@@ -1,7 +1,7 @@
-import { Data, IProductInput, IUserInput } from '@/types'
-import { toSlug } from './utils'
-import bcrypt from 'bcryptjs'
-import { i18n } from '@/i18n-config'
+import { Data, IProductInput, IUserInput } from '@/types';
+import { toSlug } from './utils';
+import bcrypt from 'bcryptjs';
+import { i18n } from '@/i18n-config';
 
 const users: IUserInput[] = [
   {
@@ -259,7 +259,7 @@ const users: IUserInput[] = [
     paymentMethod: 'PayPal',
     emailVerified: false,
   },
-]
+];
 
 const products: IProductInput[] = [
   {
@@ -355,7 +355,7 @@ const products: IProductInput[] = [
   {
     name: 'Decrum Mens Plain Long Sleeve T-Shirt - Comfortable Soft Fashion V Neck Full Sleeves Jersey Shirts',
     slug: toSlug(
-      'Decrum Mens Plain Long Sleeve T-Shirt - Comfortable Soft Fashion V Neck Full Sleeves Jersey Shirts'
+      'Decrum Mens Plain Long Sleeve T-Shirt - Comfortable Soft Fashion V Neck Full Sleeves Jersey Shirts',
     ),
     category: 'T-Shirts',
     brand: 'Jerzees',
@@ -385,7 +385,7 @@ const products: IProductInput[] = [
   {
     name: "Muscle Cmdr Men's Slim Fit Henley Shirt Long&Short Business Sleeve Casual 3 Metal Buton Placket Casual Stylish T-Shirt",
     slug: toSlug(
-      "Muscle Cmdr Men's Slim Fit Henley Shirt Long&Short Business Sleeve Casual 3 Metal Buton Placket Casual Stylish T-Shirt"
+      "Muscle Cmdr Men's Slim Fit Henley Shirt Long&Short Business Sleeve Casual 3 Metal Buton Placket Casual Stylish T-Shirt",
     ),
     category: 'T-Shirts',
     brand: ' Muscle Cmdr',
@@ -472,7 +472,7 @@ const products: IProductInput[] = [
   {
     name: "Levi's mens 505 Regular Fit Jeans (Also Available in Big & Tall)",
     slug: toSlug(
-      "Levi's mens 505 Regular Fit Jeans (Also Available in Big & Tall)"
+      "Levi's mens 505 Regular Fit Jeans (Also Available in Big & Tall)",
     ),
     category: 'Jeans',
     brand: "Levi's",
@@ -530,7 +530,7 @@ const products: IProductInput[] = [
   {
     name: "Buffalo David Bitton Mens Men's Driven Relaxed Denim JeansJeans",
     slug: toSlug(
-      "Buffalo David Bitton Mens Men's Driven Relaxed Denim JeansJeans"
+      "Buffalo David Bitton Mens Men's Driven Relaxed Denim JeansJeans",
     ),
     category: 'Jeans',
     brand: 'Buffalo David Bitton',
@@ -645,7 +645,7 @@ const products: IProductInput[] = [
   {
     name: 'SEIKO 5 Sport SRPJ83 Beige Dial Nylon Automatic Watch, Beige, Automatic Watch',
     slug: toSlug(
-      'SEIKO 5 Sport SRPJ83 Beige Dial Nylon Automatic Watch, Beige, Automatic Watch'
+      'SEIKO 5 Sport SRPJ83 Beige Dial Nylon Automatic Watch, Beige, Automatic Watch',
     ),
     category: 'Wrist Watches',
     brand: 'Seiko',
@@ -675,7 +675,7 @@ const products: IProductInput[] = [
   {
     name: "Casio Men's Heavy Duty Analog Quartz Stainless Steel Strap, Silver, 42 Casual Watch ",
     slug: toSlug(
-      "Casio Men's Heavy Duty Analog Quartz Stainless Steel Strap, Silver, 42 Casual Watch"
+      "Casio Men's Heavy Duty Analog Quartz Stainless Steel Strap, Silver, 42 Casual Watch",
     ),
     category: 'Wrist Watches',
     brand: 'Casio',
@@ -705,7 +705,7 @@ const products: IProductInput[] = [
   {
     name: 'Casio Classic Silver-Tone Stainless Steel Band Date Indicator Watch',
     slug: toSlug(
-      'Casio Classic Silver-Tone Stainless Steel Band Date Indicator Watch'
+      'Casio Classic Silver-Tone Stainless Steel Band Date Indicator Watch',
     ),
     category: 'Wrist Watches',
     brand: 'Casio',
@@ -820,7 +820,7 @@ const products: IProductInput[] = [
   {
     name: "ziitop Men's Running Walking Shoes Fashion Sneakers Mesh Dress Shoes Business Oxfords Shoes Lightweight Casual Breathable Work Formal Shoes",
     slug: toSlug(
-      "ziitop Men's Running Walking Shoes Fashion Sneakers Mesh Dress Shoes Business Oxfords Shoes Lightweight Casual Breathable Work Formal Shoes"
+      "ziitop Men's Running Walking Shoes Fashion Sneakers Mesh Dress Shoes Business Oxfords Shoes Lightweight Casual Breathable Work Formal Shoes",
     ),
     category: 'Shoes',
     brand: 'ziitop',
@@ -850,7 +850,7 @@ const products: IProductInput[] = [
   {
     name: 'Skechers mens Summits High Range Hands Free Slip-in Shoes Work shoe',
     slug: toSlug(
-      'Skechers mens Summits High Range Hands Free Slip-in Shoes Work shoe'
+      'Skechers mens Summits High Range Hands Free Slip-in Shoes Work shoe',
     ),
     category: 'Shoes',
     brand: 'Skechers',
@@ -880,7 +880,7 @@ const products: IProductInput[] = [
   {
     name: 'DLWKIPV Mens Running Shoes Tennis Cross Training Sneakers Fashion Non Slip Outdoor Walking Jogging Shoes Mesh Light Flexible Comfortable Breathable Shoes',
     slug: toSlug(
-      'DLWKIPV Mens Running Shoes Tennis Cross Training Sneakers Fashion Non Slip Outdoor Walking Jogging Shoes Mesh Light Flexible Comfortable Breathable Shoes'
+      'DLWKIPV Mens Running Shoes Tennis Cross Training Sneakers Fashion Non Slip Outdoor Walking Jogging Shoes Mesh Light Flexible Comfortable Breathable Shoes',
     ),
     category: 'Shoes',
     brand: 'DLWKIPV',
@@ -938,7 +938,7 @@ const products: IProductInput[] = [
   {
     name: "Mens Wearbreeze Shoes, Urban - Ultra Comfortable Shoes, Breeze Shoes for Men, Men's Mesh Dress Sneakers Business Shoes",
     slug: toSlug(
-      "Mens Wearbreeze Shoes, Urban - Ultra Comfortable Shoes, Breeze Shoes for Men, Men's Mesh Dress Sneakers Business Shoes"
+      "Mens Wearbreeze Shoes, Urban - Ultra Comfortable Shoes, Breeze Shoes for Men, Men's Mesh Dress Sneakers Business Shoes",
     ),
     category: 'Shoes',
     brand: 'Generic',
@@ -965,7 +965,7 @@ const products: IProductInput[] = [
 
     reviews: [],
   },
-]
+];
 const reviews = [
   {
     rating: 1,
@@ -1057,7 +1057,7 @@ const reviews = [
     comment:
       "Love this product! It's durable, stylish, and works great. Would buy again without hesitation.",
   },
-]
+];
 
 const data: Data = {
   users,
@@ -1067,9 +1067,9 @@ const data: Data = {
     {
       title: 'About Us',
       slug: 'about-us',
-      content: `Welcome to [Your Store Name], your trusted destination for quality products and exceptional service. Our journey began with a mission to bring you the best shopping experience by offering a wide range of products at competitive prices, all in one convenient platform.
+      content: `Welcome to Queenslaylah, your trusted destination for quality products and exceptional service. Our journey began with a mission to bring you the best shopping experience by offering a wide range of products at competitive prices, all in one convenient platform.
 
-At [Your Store Name], we prioritize customer satisfaction and innovation. Our team works tirelessly to curate a diverse selection of items, from everyday essentials to exclusive deals, ensuring there's something for everyone. We also strive to make your shopping experience seamless with fast shipping, secure payments, and excellent customer support.
+At Queenslaylah, we prioritize customer satisfaction and innovation. Our team works tirelessly to curate a diverse selection of items, from everyday essentials to exclusive deals, ensuring there's something for everyone. We also strive to make your shopping experience seamless with fast shipping, secure payments, and excellent customer support.
 
 As we continue to grow, our commitment to quality and service remains unwavering. Thank you for choosing [Your Store Name]—we look forward to being a part of your journey and delivering value every step of the way.`,
       isPublished: true,
@@ -1122,7 +1122,7 @@ Your data is safeguarded through robust security measures to prevent unauthorize
     {
       title: 'Conditions of Use',
       slug: 'conditions-of-use',
-      content: `Welcome to [Ecommerce Website Name]. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. These terms govern your use of our platform, including browsing, purchasing products, and interacting with any content or services provided. You must be at least 18 years old or have the consent of a parent or guardian to use this website. Any breach of these terms may result in the termination of your access to our platform.
+      content: `Welcome to Queenslaylah. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. These terms govern your use of our platform, including browsing, purchasing products, and interacting with any content or services provided. You must be at least 18 years old or have the consent of a parent or guardian to use this website. Any breach of these terms may result in the termination of your access to our platform.
 
 We strive to ensure all product descriptions, pricing, and availability information on our website are accurate. However, errors may occur, and we reserve the right to correct them without prior notice. All purchases are subject to our return and refund policy. By using our site, you acknowledge that your personal information will be processed according to our privacy policy, ensuring your data is handled securely and responsibly. Please review these terms carefully before proceeding with any transactions.
 `,
@@ -1131,7 +1131,7 @@ We strive to ensure all product descriptions, pricing, and availability informat
     {
       title: 'Customer Service',
       slug: 'customer-service',
-      content: `At [Your Store Name], our customer service team is here to ensure you have the best shopping experience. Whether you need assistance with orders, product details, or returns, we are committed to providing prompt and helpful support.
+      content: `At Queenslaylah, our customer service team is here to ensure you have the best shopping experience. Whether you need assistance with orders, product details, or returns, we are committed to providing prompt and helpful support.
 
 If you have questions or concerns, please reach out to us through our multiple contact options:
 - **Email:** support@example.com
@@ -1251,9 +1251,9 @@ We also provide helpful resources such as order tracking, product guides, and FA
         pageSize: 9,
       },
       site: {
-        name: 'NxtAmzn',
+        name: 'Queenslaylah',
         description:
-          'NxtAmzn is a sample Ecommerce website built with Next.js, Tailwind CSS, and MongoDB.',
+          'Queenslaylah is a  Ecommerce website built with Next.js, Tailwind CSS, and MongoDB.',
         keywords: 'Next Ecommerce, Next.js, Tailwind CSS, MongoDB',
         url: 'https://next-mongo-ecommerce-final.vercel.app',
         logo: '/icons/logo.svg',
@@ -1329,6 +1329,6 @@ We also provide helpful resources such as order tracking, product guides, and FA
       defaultDeliveryDate: 'Next 5 Days',
     },
   ],
-}
+};
 
-export default data
+export default data;
