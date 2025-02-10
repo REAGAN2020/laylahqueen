@@ -26,7 +26,7 @@ const signInDefaultValues =
   process.env.NODE_ENV === 'development'
     ? {
         email: 'admin@example.com',
-        password: '123456',
+        password: '',
       }
     : {
         email: '',
