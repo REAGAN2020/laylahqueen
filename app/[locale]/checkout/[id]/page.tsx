@@ -1,57 +1,45 @@
 import { notFound } from 'next/navigation'
+import React from 'react'
+
 import { auth } from '@/auth'
 import { getOrderById } from '@/lib/actions/order.actions'
 import PaymentForm from './payment-form'
 import Stripe from 'stripe'
-import { isValidObjectId } from 'mongoose' // or your ORM's validation
 
-export const metadata = { title: 'Payment' }
+export const metadata = {
+  title: 'Payment',
+}
 
-const CheckoutPaymentPage = async ({ 
-  params 
-}: { 
-  params: { id: string } 
+const CheckoutPaymentPage = async (props: {
+  params: Promise<{
+    id: string
+  }>
 }) => {
+  const params = await props.params
+
   const { id } = params
 
-  // Validate ID format
-  if (!isValidObjectId(id)) notFound()
-
-  const [order, session] = await Promise.all([
-    getOrderById(id),
-    auth()
-  ])
-
+  const order = await getOrderById(id)
   if (!order) notFound()
+
+  const session = await auth()
 
   let client_secret = null
   if (order.paymentMethod === 'Stripe' && !order.isPaid) {
-    if (!process.env.STRIPE_SECRET_KEY) {
-      throw new Error('STRIPE_SECRET_KEY is not configured')
-    }
-
-    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
-    
-    try {
-      const paymentIntent = await stripe.paymentIntents.create({
-        amount: Math.round(order.totalPrice * 100),
-        currency: 'USD',
-        metadata: { orderId: id },
-        payment_method_types: ['card'] // Explicitly specify payment methods
-      })
-      client_secret = paymentIntent.client_secret
-    } catch (error) {
-      console.error('Stripe Payment Intent Error:', error)
-      throw new Error('Failed to initialize payment processing')
-    }
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string)
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: Math.round(order.totalPrice * 100),
+      currency: 'USD',
+      metadata: { orderId: order._id },
+    })
+    client_secret = paymentIntent.client_secret
   }
-
   return (
     <PaymentForm
       order={order}
-      paypalClientId={process.env.PAYPAL_CLIENT_ID || ''}
+      paypalClientId={process.env.PAYPAL_CLIENT_ID || 'sb'}
       clientSecret={client_secret}
-      isAdmin={session?.user?.role === 'Admin'}
+      isAdmin={session?.user?.role === 'Admin' || false}
     />
   )
 }
