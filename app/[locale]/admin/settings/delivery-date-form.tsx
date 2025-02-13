@@ -80,7 +80,13 @@ export default function DeliveryDateForm({
                   <FormItem>
                     {index == 0 && <FormLabel>Days</FormLabel>}
                     <FormControl>
-                      <Input {...field} placeholder='daysToDeliver' />
+                      <Input
+                        {...field}
+                        placeholder='daysToDeliver'
+                        type='number'
+                        value={field.value || ''}
+                        onChange={(e) => field.onChange(Number(e.target.value) || 0)} // Convert to number
+                      />
                     </FormControl>
                     <FormMessage>
                       {
@@ -98,7 +104,13 @@ export default function DeliveryDateForm({
                   <FormItem>
                     {index == 0 && <FormLabel>Shipping Price</FormLabel>}
                     <FormControl>
-                      <Input {...field} placeholder='shippingPrice' />
+                      <Input
+                        {...field}
+                        placeholder='shippingPrice'
+                        type='number'
+                        value={field.value || ''}
+                        onChange={(e) => field.onChange(Number(e.target.value) || 0)} // Convert to number
+                      />
                     </FormControl>
                     <FormMessage>
                       {
@@ -116,7 +128,13 @@ export default function DeliveryDateForm({
                   <FormItem>
                     {index == 0 && <FormLabel>Free Shipping</FormLabel>}
                     <FormControl>
-                      <Input {...field} placeholder='freeShippingMinPrice' />
+                      <Input
+                        {...field}
+                        placeholder='freeShippingMinPrice'
+                        type='number'
+                        value={field.value || ''}
+                        onChange={(e) => field.onChange(Number(e.target.value) || 0)} // Convert to number
+                      />
                     </FormControl>
                     <FormMessage>
                       {
